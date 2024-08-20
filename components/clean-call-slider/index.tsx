@@ -29,7 +29,7 @@ const CleanCallSlider: React.FC = () => {
             stop1()
             stop2()
         }
-    }, [stop, stop2])
+    }, [stop1, stop2])
 
 
 
