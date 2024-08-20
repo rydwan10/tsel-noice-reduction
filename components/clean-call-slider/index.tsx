@@ -27,9 +27,6 @@ const CleanCallSlider: React.FC = () => {
                     style={{ width: 50, height: 50 }}
                 />
             </div>
-
-
-
             <Image
                 className={`${isSliderOpen ? 'rotate-0' : 'rotate-180'} duration-300 absolute ${isSliderOpen ? 'right-[8.7rem]' : 'right-[4.7rem]'} ${isSliderOpen ? 'top-[5.2rem]' : 'top-[5.5rem]'} z-20`}
                 width={20}
@@ -41,7 +38,7 @@ const CleanCallSlider: React.FC = () => {
             <div
                 className={`absolute top-12 right-0 transition-transform duration-300 ease-in-out ${isSliderOpen ? 'translate-x-0' : 'translate-x-16'}`}
                 style={{
-                    backgroundImage: `url(${isSliderOpen ? sliderBackgroundImage.src : sliderBackgroundImageOff.src})`,
+                    backgroundImage: `url(${switchValue ? sliderBackgroundImage.src : sliderBackgroundImageOff.src})`,
                     backgroundSize: 'contain',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -50,11 +47,8 @@ const CleanCallSlider: React.FC = () => {
                 }}
             >
 
-
                 <div className="flex items-center justify-between">
-
                     <div className={`flex flex-col items-start pt-6 px-2 ${!isSliderOpen && 'w-24'}`}>
-
                         <p className={cn("text-white text-xs font-bold", telkomselBatikSans.className)}>Panggilan Jernih</p>
                         <Spacer height={4} />
                         <div className="flex flex-row">
@@ -64,15 +58,7 @@ const CleanCallSlider: React.FC = () => {
                                 checked={switchValue} onCheckedChange={setSwitchValue} />}
                         </div>
                     </div>
-
-
-
                 </div>
-
-
-                {/* <div className="flex justify-center mt-2">
-                        
-                    </div> */}
             </div>
         </div>
     )
