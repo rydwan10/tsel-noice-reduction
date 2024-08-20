@@ -13,25 +13,40 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import useSound from "use-sound"
 
-
-const CleanCallSlider: React.FC = () => {
+const NoiseReductionSlider: React.FC = () => {
     const [isSliderOpen, setIsSliderOpen] = useState(false);
     const [switchValue, setSwitchValue] = useState(false);
 
-    const [play1, { stop: stop1 }] = useSound('/static/noise-reduction-disabled.mp3', { volume: !switchValue ? 1 : 0 });
-    const [play2, { stop: stop2 }] = useSound('/static/noise-reduction-enabled.mp3', { volume: 1 })
 
+
+    const [play1, { stop: stop1 }] = useSound('/static/noise-reduction-disabled.mp3', {
+        volume: !switchValue ? 1 : 0,
+    });
+    const [play2, { stop: stop2 }] = useSound('/static/noise-reduction-enabled.mp3', {
+        volume: 1
+    })
+
+    function reply() {
+        play1();
+        play2();
+    }
+
+    const SOUND_DURATION = 25000;
 
     useEffect(() => {
         play1();
         play2();
+
+        const interval = setInterval(() => {
+            reply();
+        }, SOUND_DURATION);
+
         return () => {
             stop1()
             stop2()
+            clearInterval(interval);
         }
     }, [stop1, stop2])
-
-
 
     return (
         <div className="relative w-full flex flex-col justify-end top-80">
@@ -81,4 +96,4 @@ const CleanCallSlider: React.FC = () => {
     )
 }
 
-export default CleanCallSlider;
+export default NoiseReductionSlider;

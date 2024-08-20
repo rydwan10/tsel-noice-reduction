@@ -6,7 +6,7 @@ import Lottie from "lottie-react";
 import Spacer from "@/components/spacer";
 import Link from "next/link";
 
-const CallingScreen: React.FC = () => {
+const NativeCalling: React.FC = () => {
     return (
         <div className="container flex-col flex items-center justify-center bg-black w-full h-full pt-[200px]" style={
             {
@@ -29,4 +29,4 @@ const CallingScreen: React.FC = () => {
 }
 
 
-export default CallingScreen;
+export default NativeCalling;

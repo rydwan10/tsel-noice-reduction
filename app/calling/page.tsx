@@ -1,5 +1,5 @@
-import CallingScreen from "@/screens/calling-screen";
+import NativeCalling from "@/screens/native-calling";
 
-export default function CallingPage() {
-    return <CallingScreen />
+export default function NativeCallingPage() {
+    return <NativeCalling />
 }

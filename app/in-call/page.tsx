@@ -1,5 +1,5 @@
-import InCallScreen from "@/screens/in-call-screen";
+import NativeInCallScreen from "@/screens/native-in-call";
 
 export default function InCallPage() {
-    return <InCallScreen />
+    return <NativeInCallScreen />
 }

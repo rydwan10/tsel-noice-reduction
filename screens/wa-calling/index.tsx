@@ -1,4 +1,5 @@
 "use client"
+
 import backgroundImage from "@/assets/images/wa-calling-bg.png"
 import * as animationData from '@/assets/animations/lottie/call-action.json'
 import Spacer from "@/components/spacer";
@@ -26,6 +27,5 @@ const WaCallingScreen: React.FC = () => {
         </div>
     );
 }
-
 
 export default WaCallingScreen;
