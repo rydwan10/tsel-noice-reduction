@@ -1,6 +1,5 @@
 "use client"
 
-import backgroundImage from "@/assets/images/in-call-screen.png"
 import sliderBackgroundImage from "@/assets/images/pop-up-bg.png"
 import sliderBackgroundImageOff from "@/assets/images/pop-up-off-bg.png"
 import chevronImage from "@/assets/images/chevron-slider.png"
@@ -12,7 +11,6 @@ import Spacer from "@/components/spacer"
 import { telkomselBatikSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
-import test from "../../assets/audio/noise-reduction-disabled.mp3";
 import useSound from "use-sound"
 
 
