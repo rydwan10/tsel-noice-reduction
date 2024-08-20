@@ -7,19 +7,25 @@ import chevronImage from "@/assets/images/chevron-slider.png"
 import lottie5g from "@/assets/animations/lottie/5g-logo.json"
 import { Switch } from "@/components/ui/switch";
 import Lottie from "lottie-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Spacer from "@/components/spacer"
 import { telkomselBatikSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import NoiseReductionSimulator from "../noise-reduction-simulator"
+import ReactAudioPlayer from "react-audio-player"
+
 
 
 const CleanCallSlider: React.FC = () => {
     const [isSliderOpen, setIsSliderOpen] = useState(false);
     const [switchValue, setSwitchValue] = useState(false);
 
+
     return (
         <div className="relative w-full flex flex-col justify-end top-80">
+
+            <ReactAudioPlayer src="../../assets/audio/noise-reduction-disabled.wav" autoPlay />
             <div className="flex flex-row justify-end">
                 <Lottie
                     className={`relative z-10 top-6 duration-300 ${isSliderOpen ? 'right-24' : 'right-9'}`}

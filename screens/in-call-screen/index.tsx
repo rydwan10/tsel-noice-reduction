@@ -27,14 +27,8 @@ const InCallScreen: React.FC = () => {
                 backgroundPosition: 'center'
             }
         }>
-
-
             <CleanCallSlider />
-
         </div>
-
-
-
     );
 }
 
