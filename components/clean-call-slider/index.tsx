@@ -7,16 +7,32 @@ import chevronImage from "@/assets/images/chevron-slider.png"
 import lottie5g from "@/assets/animations/lottie/5g-logo.json"
 import { Switch } from "@/components/ui/switch";
 import Lottie from "lottie-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Spacer from "@/components/spacer"
 import { telkomselBatikSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import test from "../../assets/audio/noise-reduction-disabled.mp3";
+import useSound from "use-sound"
 
 
 const CleanCallSlider: React.FC = () => {
     const [isSliderOpen, setIsSliderOpen] = useState(false);
     const [switchValue, setSwitchValue] = useState(false);
+
+    const [play1, { stop: stop1 }] = useSound('/static/noise-reduction-disabled.mp3', { volume: !switchValue ? 1 : 0 });
+    const [play2, { stop: stop2 }] = useSound('/static/noise-reduction-enabled.mp3', { volume: 1 })
+
+
+    useEffect(() => {
+        play1();
+        play2();
+        return () => {
+            stop1()
+            stop2()
+        }
+    }, [stop, stop2])
+
 
 
     return (
@@ -34,7 +50,9 @@ const CleanCallSlider: React.FC = () => {
                 height={20}
                 src={chevronImage.src}
                 alt="Chevron Icon"
-                onClick={() => setIsSliderOpen(!isSliderOpen)}
+                onClick={() => {
+                    setIsSliderOpen(!isSliderOpen)
+                }}
             />
             <div
                 className={`absolute top-12 right-0 transition-transform duration-300 ease-in-out ${isSliderOpen ? 'translate-x-0' : 'translate-x-16'}`}
