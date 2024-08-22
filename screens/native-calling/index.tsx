@@ -11,8 +11,9 @@ const NativeCalling: React.FC = () => {
         <div className="container flex-col flex items-center justify-center bg-black w-full h-full pt-[200px] shadow-xl shadow-slate-700" style={
             {
                 backgroundImage: `url(${backgroundImage.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
             }
         }>
             <Spacer height={450} />

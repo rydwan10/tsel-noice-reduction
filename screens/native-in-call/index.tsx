@@ -12,8 +12,9 @@ const NativeInCallScreen: React.FC = () => {
         <div className=" bg-black w-full h-full pb-8 pt-[200px] md:pb-10 overflow-hidden" style={
             {
                 backgroundImage: `url(${backgroundImage.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
             }
         }>
             <NoiseReductionSlider />
