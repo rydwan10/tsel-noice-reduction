@@ -8,11 +8,12 @@ import NoiseReductionSlider from "@/components/noise-reduction-slider";
 
 const WaInCallScreen: React.FC = () => {
     return (
-        <div className="bg-black w-full h-full pb-8 pt-[200px] md:pb-10 overflow-hidden" style={
+        <div className="bg-black w-full h-full pb-8 pt-[200px] md:pb-10 overflow-hidden shadow-xl shadow-slate-700" style={
             {
                 backgroundImage: `url(${backgroundImage.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
             }
         }>
             <NoiseReductionSlider />

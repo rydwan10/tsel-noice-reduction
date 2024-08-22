@@ -17,7 +17,7 @@ const NativeInCallScreen: React.FC = () => {
             }
         }>
             <NoiseReductionSlider />
-            <div className="flex flex-col justify-end items-center pb-48 h-full">
+            <div className="flex flex-col justify-end items-center pb-48 h-full shadow-xl shadow-slate-700">
                 <Link href={'/'}>
                     <Image src={hungUpNative} alt="hung up Native button"></Image>
                 </Link>

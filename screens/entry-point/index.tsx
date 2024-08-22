@@ -8,7 +8,7 @@ import Spacer from "@/components/spacer";
 
 const EntryPointScreen: React.FC = () => {
     return (
-        <div className="container flex-col flex items-center justify-center bg-black w-full h-full pt-[200px]"
+        <div className="container flex-col flex items-center justify-center bg-black w-full h-full pt-[200px] shadow-xl shadow-slate-700"
             style={{
                 background: 'linear-gradient(76.81deg, #B90024 15.71%, #FF0025 68.97%, #FD195E 94.61%)',
 

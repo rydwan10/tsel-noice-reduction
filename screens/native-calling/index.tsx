@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const NativeCalling: React.FC = () => {
     return (
-        <div className="container flex-col flex items-center justify-center bg-black w-full h-full pt-[200px]" style={
+        <div className="container flex-col flex items-center justify-center bg-black w-full h-full pt-[200px] shadow-xl shadow-slate-700" style={
             {
                 backgroundImage: `url(${backgroundImage.src})`,
                 backgroundSize: 'cover',
