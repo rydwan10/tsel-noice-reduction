@@ -29,7 +29,7 @@ export default function RootLayout({
               background: '#101315'
             }}
           >
-            <div className="w-full max-w-[unset] md:max-w-md md:shadow-xl">
+            <div className="w-full max-w-[unset] md:max-w-md shadow-xl shadow-slate-700">
               {children}
             </div>
           </div>
