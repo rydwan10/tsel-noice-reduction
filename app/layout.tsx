@@ -24,7 +24,11 @@ export default function RootLayout({
         className='min-h-screen bg-background font-sans antialiased'
       >
         <div className="relative flex min-h-screen flex-col">
-          <div className="flex h-full flex-1 justify-center bg-[#F6F3F3]">
+          <div className="flex h-full flex-1 justify-center"
+            style={{
+              background: '#101315'
+            }}
+          >
             <div className="w-full max-w-[unset] md:max-w-md md:shadow-xl">
               {children}
             </div>
